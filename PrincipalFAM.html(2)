@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página principal Familia</title>
+    <link rel="stylesheet" href="Fam.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">BIAPI</a>
+     
+     <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+            </label>
+      
+      <nav class="navbar">
+        <a href="#" style="--i:0;">Inicio</a>
+        <a href="#" style="--i:1;">Perfil</a>
+        <a href="#" style="--i:2;">BIAPI</a>
+        <a href="#" style="--i:3;">Datos</a>
+      </nav>
+    </header>
+    <div class="carousel">
+      <div class="slide">
+          <img src="../imagenes/background.jpg" alt="Imagen 1">
+      </div>
+      <div class="slide">
+          <img src="../imagenes/fondo.jpg" alt="Imagen 2">
+      </div>
+      <div class="slide">
+          <img src="../imagenes/fondo1.jpg" alt="Imagen 3">
+      </div>
+  </div>
+  <button id="prev">Anterior</button>
+  <button id="next">Siguiente</button>
+</body>
+</html>
+<script>
+
+  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+    slides[currentSlide].style.display = "none";
+    slides[slideIndex].style.display = "block";
+    currentSlide = slideIndex;
+}
+
+document.getElementById("prev").addEventListener("click", () => {
+    const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prevSlide);
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    showSlide(nextSlide);
+});
+
+// Mostrar el primer slide al cargar la página
+showSlide(0);
+
+</script>
