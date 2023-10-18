@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página principal Familia</title>
+    <link rel="stylesheet" href="Fam.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">BIAPI</a>
+     
+     <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+            </label>
+      
+      <nav class="navbar">
+        <a href="#" style="--i:0;">Inicio</a>
+        <a href="#" style="--i:1;">Perfil</a>
+        <a href="#" style="--i:2;">BIAPI</a>
+        <a href="#" style="--i:3;">Datos</a>
+      </nav>
+    </header>
+    <div class="container">
+        <div id="slide">
+            <div class="item" style="background-image: url(../imagenes/carruselfamilia.jpg);">
+                <div class="content">
+                    <div class="name">Familia</div>
+                    <div class="des">El usuario del familiar, podrá acceder a los siguientes datos:
+                      *Podrá ver la ubicación en tiempo real del bastón.
+                      *Podrá recibir notificaciones de alerta sobre el bastón.
+                      *Podrá acceder a la opción de calibración de BIAPI para la persona portadora del producto.
+                      *Recibirá notificaciones de próximas actualizaciones y podrá acceder a información acerca de BIAPI.</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(4.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(3.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(4.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(5.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(6.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+  
+    </script>
+</body>
+</html>
+<script>carousel = new bootstrap.Carousel('#myCarousel')</script> 
