@@ -5,16 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página principal Familia</title>
     <link rel="stylesheet" href="Fam.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
   </head>
   <body>
     <header class="header">
       <a href="#" class="logo">BIAPI</a>
+     
+     <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+            </label>
+      
       <nav class="navbar">
-        <a href="#">Inicio</a>
-        <a href="#">Perfil</a>
-        <a href="#">BIAPI</a>
-        <a href="#">Datos</a>
+        <a href="#" style="--i:0;">Inicio</a>
+        <a href="#" style="--i:1;">Perfil</a>
+        <a href="#" style="--i:2;">BIAPI</a>
+        <a href="#" style="--i:3;">Datos</a>
       </nav>
     </header>
-  </body>
+    
+   <div class="container">
+    <div id="slide">
+        <div class="item" style="background-image: url(../imagenes/carruselfamilia.png);">
+            <div class="content">
+                <div class="name">Familia</div>
+                <div class="des"></div>
+                <h4>El usuario del familiar, podrá acceder a los siguientes datos:</h4>
+                <h5>°Podrá ver la ubicación en tiempo real del bastón.</h5>
+                <h5>°Podrá recibir notificaciones de alerta sobre el bastón.</h5>
+                <h5>°Podrá acceder a la opción de calibración de BIAPI para la persona portadora del producto.</h5>
+                <h5>°Recibirá notificaciones de próximas actualizaciones y podrá acceder a información acerca de BIAPI.</h5>
+               
+                <button>Más información</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(../imagenes/welcome.png);">
+            <div class="content">
+                <div class="name">¡BIENVENIDOS!</div>
+                <div class="des">Bienvenidos a BIAPI Familia</div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(../imagenes/BIAPI.png);">
+            <div class="content">
+                <div class="name">BIAPI</div>
+                <div class="des"></div>
+                <h4>BIAPI implementa la inteligencia artificial para hacer un mundo más inclusivo.</h4>
+                <h5>Es un producto de la empresa desarrolladora de software RNA-CODE, el cual busca que personas con</h5>
+                <h5>discapacidad visual puedan ser más independientes a la hora de movilizarse y claramente, de una forma segura.</h5>
+                <h5>Y recueda que RNA-CODE es una empresa liderada por jovenes emprendedores sedientos de inovación inclusiva.</h5>
+                <h5>¿Ya conocías nuestro producto? ¿Te gustaría adquirirlo?</h5>
+                
+                <button>Más información</button>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+</div>
+
+<script>
+  document.getElementById('next').onclick = function(){
+let lists = document.querySelectorAll('.item');
+document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+let lists = document.querySelectorAll('.item');
+document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+
+</script>
+<footer style="background-image: linear-gradient(54deg, #1c1468, #262928); color: white; text-align: center;">
+ <div class="footer-content">
+  <h2>RNA-CODE</h2>
+  <h4>Todos los derechos de autor se reservan a la empresa programadora de software RNA-CODE</h4>
+  
+    <h5>RNA-CODE ¡Transformando vidas a través de la tecnología inclusiva!</h5>
+    
+    <h6>Todos los derechos reservados © 2023 <b>RNA-CODE</b></h6>
+    <ul class="socials">
+      <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+ </div>
+ <div class="footer-bottom">
+  <h5>RNA-CODE ¡Transformando vidas a través de la tecnología inclusiva!</h5>
+
+ </div>
+    <img src="../imagenes/logo RNA-CODE (3).png" alt="RNA-CODE Logo">
+  
+  
+  </footer>
+</body>
 </html>
